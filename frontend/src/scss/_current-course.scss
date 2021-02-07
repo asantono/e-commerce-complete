@@ -1,0 +1,23 @@
+@import "./variables";
+
+.current-course {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: calc(100vh - 23rem);
+  width: 100%;
+
+  &__title {
+    font-size: 2.5rem;
+  }
+
+  &__message {
+    font-size: 1.6rem;
+  }
+
+  &__thank-you {
+    font-size: 1.4rem;
+    font-style: italic;
+  }
+}

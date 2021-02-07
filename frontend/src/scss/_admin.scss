@@ -1,0 +1,82 @@
+@import "./variables";
+
+.admin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-top: 4rem;
+  }
+
+  &__form {
+    margin-top: 3rem;
+  }
+
+  &__results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+    width: 100vw;
+    border: 2px solid $color-blue-light;
+    font-size: 1.8rem;
+    font-weight: 600;
+    &--title {
+      margin-top: 3rem;
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+  }
+
+  &__orders-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    width: 100vw;
+    border: 2px solid $color-blue-light;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  &__order {
+    display: flex;
+    // justify-content: center;
+    width: 100%;
+
+    cursor: pointer;
+
+    &:hover {
+      color: $color-blue-light;
+    }
+
+    &--left {
+      margin-right: 2rem;
+    }
+    &--date {
+      margin-left: 2rem;
+    }
+  }
+
+  &__sale {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    &--input {
+      margin-right: 2rem;
+    }
+    &--current {
+      margin-left: 2rem;
+    }
+  }
+}

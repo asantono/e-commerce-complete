@@ -1,0 +1,75 @@
+@import "./variables";
+
+.contact {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: $full-height;
+  &__title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  &__message {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  &__email {
+    font-size: 2rem;
+    font-weight: 800;
+    color: $color-blue-light;
+    text-decoration: none;
+    margin-bottom: 0.6rem;
+    text-align: center;
+
+    &:visited {
+      color: $color-blue-light;
+    }
+
+    &--black {
+      font-weight: 400;
+      color: $color-black;
+    }
+  }
+  &__social {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    align-items: center;
+    justify-items: center;
+    font-size: 8rem;
+    width: 50vw;
+
+    @include lg {
+      width: 60vw;
+    }
+
+    @include md {
+      width: 80vw;
+    }
+
+    @include sm {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    &--youtube {
+      color: $color-youtube;
+      overflow: hidden;
+    }
+    &--facebook {
+      font-size: 5.8rem;
+      color: $color-facebook;
+    }
+    &--linkedin {
+      font-size: 6rem;
+      color: $color-linkedin;
+    }
+    &--twitter {
+      font-size: 6;
+      color: $color-twitter;
+    }
+  }
+}

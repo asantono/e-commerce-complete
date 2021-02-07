@@ -1,0 +1,12 @@
+@import "./variables";
+
+.load-screen {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100vw;
+  //   background-color: rgba($color-slate-dark, 0.6);
+  z-index: 99999999999999;
+}

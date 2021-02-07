@@ -1,0 +1,59 @@
+@import "./variables";
+
+.result-box {
+  position: absolute;
+  height: 70vh;
+  width: 80vw;
+  left: 50%;
+  background-color: rgba($color-blue-light, 1);
+  color: $color-grey-light;
+  z-index: 9999999999;
+  transform: translate(-50%, 3%);
+  opacity: 1;
+  transition: opacity 0.5s;
+
+  &__opacity {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  &__container {
+    // display: flex;
+  }
+
+  &__course {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2rem;
+    min-height: 8rem;
+    font-size: 1.8rem;
+    border-bottom: 2px solid $color-grey-light;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: rgba($color-pink-dark, 1);
+    }
+
+    &--left {
+      width: 40%;
+      margin-right: 5%;
+      &--title {
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+      }
+      &--author {
+      }
+    }
+
+    &--right {
+      width: 55%;
+      &--adtext {
+      }
+    }
+  }
+}

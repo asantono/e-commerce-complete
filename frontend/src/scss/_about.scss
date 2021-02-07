@@ -1,0 +1,85 @@
+@import "./variables";
+
+.about {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  font-size: 1.6rem;
+  padding: 3rem;
+
+  &__title {
+    font-size: 2.5rem;
+  }
+
+  &__message {
+    margin-top: 2rem;
+
+    &--tech {
+      padding-top: 1rem;
+      width: 100%;
+      text-align: center;
+    }
+    &--link {
+      padding-top: 1rem;
+      width: 100%;
+      color: $color-blue-light;
+      text-align: center;
+      font-weight: 800;
+
+      & > * {
+        text-decoration: none;
+
+        &:visited {
+          color: $color-blue-light;
+        }
+      }
+
+      &:last-child {
+        padding-bottom: 2rem;
+      }
+
+      &--black {
+        color: $color-black;
+        width: 20rem;
+        font-weight: 400;
+      }
+    }
+  }
+
+  &__features {
+    width: 100%;
+    &--title {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    &--list {
+      display: grid;
+      width: 100%;
+      grid-template-columns: repeat(auto-fit, minmax(41rem, 1fr));
+      gap: 1rem;
+      justify-items: center;
+      align-items: center;
+
+      & > * {
+        width: 41rem;
+      }
+    }
+  }
+
+  &__instructions {
+    margin-top: 2rem;
+    &--message {
+      &--break {
+        margin-top: 1.6rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 825px) {
+  .about__features--list > * {
+    width: auto;
+  }
+}

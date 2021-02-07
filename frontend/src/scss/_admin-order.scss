@@ -1,0 +1,37 @@
+@import "./variables";
+
+.admin-order {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  width: 100%;
+
+  &__container {
+    display: grid;
+    width: 100%;
+    // grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    margin-top: 3rem;
+  }
+
+  &__order {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    border: 2px solid $color-blue-light;
+    margin-bottom: 4rem;
+    padding: 2rem;
+  }
+
+  &__remove-margin {
+    margin: 0;
+  }
+
+  &__add-margin {
+    &--three {
+      margin-top: 3rem;
+    }
+  }
+}

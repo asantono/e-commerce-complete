@@ -1,0 +1,146 @@
+@import "./variables";
+
+.cta-top {
+  position: relative;
+  display: flex;
+  margin-top: 4rem;
+  justify-content: center;
+  align-items: center;
+
+  &__overlay {
+    display: relative;
+    width: 85%;
+    height: 38rem;
+
+    overflow: hidden;
+
+    @include md {
+      width: 100%;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 7.5%;
+      height: 100%;
+      width: 100%;
+      background-image: linear-gradient(
+        to left,
+        $color-transparent 35%,
+        $color-slate-dark 45%
+      );
+      z-index: 1;
+
+      @include md {
+        left: 0;
+        background-image: linear-gradient(
+          to left,
+          $color-transparent 15%,
+          $color-slate-dark 35%
+        );
+      }
+
+      @include sm {
+        background-image: none;
+        background-color: rgba($color-slate-dark, 0.9);
+      }
+    }
+    &--img {
+      @include xl {
+        display: flex;
+        width: 100%;
+        height: 38rem;
+        object-fit: contain;
+        z-index: 20000;
+        overflow: hidden;
+        margin-left: 40%;
+        transform: scale(2);
+      }
+
+      @include full {
+        margin-left: 35%;
+        transform: scale(1.1);
+      }
+
+      @include lg {
+        margin-left: 25%;
+        transform: none;
+      }
+
+      @include sm {
+        object-fit: cover;
+        margin-left: 0;
+      }
+    }
+
+    @include md {
+      width: 100%;
+      // background-image: linear-gradient(
+      //     to left,
+      //     $color-transparent 15%,
+      //     $color-slate-dark 30%
+      //   ),
+      //   url("../imgs/work.jpg");
+    }
+  }
+
+  &__textbox {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    // grid-template-rows: 1fr 1fr 1fr 1fr;
+    // row-gap: 1.6rem;
+    width: 45%;
+    left: 10%;
+    height: 36rem;
+    // margin: 2rem 0;
+    color: $color-grey-light;
+    align-items: flex-start;
+
+    justify-content: space-around;
+    z-index: 2;
+
+    @include md {
+      height: 36rem;
+      width: 60%;
+      left: 3rem;
+    }
+
+    @include sm {
+      width: 100%;
+      left: 0;
+      padding: 2rem;
+    }
+
+    &--headline {
+      font-size: 3.5rem;
+    }
+
+    &--story {
+      font-size: 1.6rem;
+    }
+
+    &--button {
+      height: 3.5rem;
+      width: 33rem;
+      padding: 0 1rem;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: $color-grey-light;
+      background-color: $color-blue-light;
+      border-radius: 10rem;
+      border: none;
+      outline: none;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      cursor: pointer;
+      transition: all 0.4s;
+
+      &:hover {
+        color: $color-blue-light;
+        background-color: $color-grey-light;
+      }
+    }
+  }
+}

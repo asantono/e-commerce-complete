@@ -1,0 +1,40 @@
+export const GET_USER = "GET_USER";
+export const SET_ALERT = "SET_ALERT";
+export const REMOVE_ALERT = "REMOVE_ALERT";
+export const LOGOUT = "LOGOUT";
+export const CHECK_USER_FAIL = "CHECK_USER_FAIL";
+export const UPDATE_CART = "UPDATE_CART";
+export const CHARGE_COMPLETE = "CHARGE_COMPLETE";
+export const COURSES_RETRIEVED = "COURSES_RETRIEVED";
+export const MORE_COURSES_RETRIEVED = "MORE_COURSES_RETRIEVED";
+
+export const ADD_CARDS_TO_USER = "ADD_CARDS_TO_USER";
+export const SET_CARD = "SET_CARD";
+export const SET_USER_COURSE = "SET_USER_COURSE";
+export const COURSE_CREATED = "COURSE_CREATED";
+
+export const SEND_IMAGE_FALSE = "SEND_IMAGE_FALSE";
+export const SET_COURSE_DATA = "SET_COURSE_DATA";
+export const SALE_OPT_IN = "SALE_OPT_IN";
+export const SET_COURSE_FEATURES = "SET_COURSE_FEATURES";
+
+export const EDIT_COURSE_DATA = "EDIT_COURSE_DATA";
+export const RESET_COURSE_DATA = "RESET_COURSE_DATA";
+
+export const CREATED_COURSES_RETRIEVED = "CREATED_COURSES_RETRIEVED";
+
+export const ADMIN_GET_USER = "ADMIN_GET_USER";
+export const SALE = "SALE";
+export const COURSE_SALE = "COURSE_SALE";
+
+export const COURSE_SEARCH = "COURSE_SEARCH";
+
+export const ORDER_DETAILS = "ORDER_DETAILS";
+export const ADMIN_GET_USER_FAIL = "ADMIN_GET_USER_FAIL";
+
+export const STRIPE_CHARGE_RETRIEVED = "STRIPE_CHARGE_RETRIEVED";
+
+export const LOADING = "LOADING";
+export const STOP_LOADING = "STOP_LOADING";
+
+export const HASH = "HASH";

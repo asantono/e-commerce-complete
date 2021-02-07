@@ -1,0 +1,56 @@
+@import "./variables";
+
+.card-picker {
+}
+
+.card-picker__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-white;
+  font-size: 2rem;
+  padding: 1rem 0;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    color: $color-blue-light;
+  }
+}
+
+.card-picker__padding {
+  border-bottom: 1px solid rgba($color-white, 0.5);
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  padding-top: 1rem;
+}
+
+.card-picker__padding--small {
+  padding-bottom: 1rem;
+}
+
+.card-picker__list--brand {
+  width: 18rem;
+  text-align: center;
+}
+
+.card-picker__list--last4 {
+  width: 18rem;
+  text-align: center;
+}
+
+.card-picker__list--container {
+  display: flex;
+}
+
+.card-picker__list--remove {
+  display: flex;
+  width: 18rem;
+  justify-content: center;
+  align-items: center;
+  color: $color-pink-dark;
+  font-size: 3rem;
+  z-index: 10;
+}
