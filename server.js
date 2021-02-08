@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const cors = require("cors");
+//const cors = require("cors");
+const path = require("path");
 const mongoose = require("mongoose");
 const authRoutes = require("./routes/authRoutes");
 const { sendError } = require("./utils/ErrorHandler");
@@ -14,14 +15,14 @@ require("dotenv").config();
 
 const app = express();
 
-app.enable("trust proxy");
+// app.enable("trust proxy");
 
-app.use(
-  cors({
-    origin: "http://localhost:3000",
-    credentials: true,
-  })
-);
+// app.use(
+//   cors({
+//     origin: "http://localhost:3000",
+//     credentials: true,
+//   })
+// );
 
 app.use(bodyParser.json());
 app.use(cookieParser());
@@ -44,6 +45,12 @@ mongoose
     useUnifiedTopology: true,
   })
   .then(() => console.log("connected to database!!!"));
+
+app.use(express.static(path.join(__dirname, "build")));
+
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
 
 const port = process.env.PORT || 5000;
 

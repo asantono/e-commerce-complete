@@ -144,6 +144,7 @@ export const sendCourseImage = (image, courseId) => async (dispatch) => {
   const loadId = uuid();
   dispatch(loading(loadId));
   if (!image.length) {
+    dispatch(getMyCourses());
     dispatch({ type: SEND_IMAGE_FALSE });
     dispatch(loading(loadId));
     return;
