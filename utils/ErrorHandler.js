@@ -10,6 +10,9 @@ const sendError = (err, res) => {
   let { statusCode, message } = err;
   let updatedErr = "";
 
+  console.log(err);
+  console.log(err.message);
+
   switch (err.name) {
     case "MongoError":
       if (err.code.toString() === "11000") {

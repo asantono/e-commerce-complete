@@ -68,7 +68,6 @@ const StripePay = () => {
     let duplicate = [];
     for (let i = 0; i < coursesOwned.length; i++) {
       if (cart.some((el) => el._id === coursesOwned[i]._id)) {
-        console.log(coursesOwned[i]._id);
         duplicate = [...duplicate, coursesOwned[i].title];
       }
     }
