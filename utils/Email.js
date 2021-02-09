@@ -6,10 +6,10 @@ exports.email = async (email, url, type = "passwordRecovery") => {
     let transporter = nodemailer.createTransport({
       host: process.env.SENDGRID_SERVER,
       port:
-        process.env.NODE_ENV === "dev"
+        process.env.NODE_ENV === "development"
           ? process.env.SENDGRID_PORT
           : process.env.SENDGRID_SSL_PORT,
-      secure: process.env.NODE_ENV === "dev" ? false : true, // true for 465, false for other ports
+      secure: process.env.NODE_ENV === "development" ? false : true, // true for 465, false for other ports
       auth: {
         user: process.env.SENDGRID_USERNAME,
         pass: process.env.SENDGRID_KEY,
