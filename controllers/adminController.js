@@ -29,23 +29,17 @@ exports.adminGetUser = async (req, res, next) => {
 exports.sale = async (req, res, next) => {
   try {
     let { sale } = req.body;
-
-    console.log(sale);
     sale = parseFloat(sale);
     sale = sale.toFixed(2);
-    let saleToUpdate = await Sale.find({ name: "current" });
-    console.log(saleToUpdate);
+    let saleToUpdate = await Sale.findOne({ name: "current" });
     if (!saleToUpdate) {
       saleToUpdate = await Sale.create({
         name: "current",
         sale,
       });
-      console.log("There was no sale!");
-      console.log(saleToUpdate);
     } else {
       saleToUpdate.sale = sale;
-      console.log(saleToUpdate.sale);
-      saleToUpdate.save();
+      await saleToUpdate.save();
     }
     res.status(201).json({
       status: "success",

@@ -136,6 +136,9 @@ const tokenChecker = async (req, res, next) => {
 exports.checkUserCred = async (req, res, next) => {
   const user = await tokenChecker(req, res, next);
 
+  console.log("CHECK USER CRED");
+  console.log(user);
+
   if (!user) {
     return next(new ErrorHandler(404, "User not found"));
   }
@@ -191,7 +194,9 @@ exports.forgotPassword = async (req, res, next) => {
 
   try {
     let host =
-      process.env.NODE_ENV === "dev" ? process.env.HOST : process.env.HOST_LIVE;
+      process.env.NODE_ENV === "development"
+        ? process.env.HOST
+        : process.env.HOST_LIVE;
     const resetUrl = `${req.protocol}://${host}resetPassword/${resetToken}`;
     const response = await email(user.email, resetUrl);
     if (!response) {

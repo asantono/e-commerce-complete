@@ -222,7 +222,7 @@ exports.createCourse = async (req, res, next) => {
     features,
   } = req.body;
 
-  const { _id, role } = req.user;
+  const { _id } = req.user;
 
   try {
     const courseCreator = await User.findById(_id);
