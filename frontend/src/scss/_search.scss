@@ -20,10 +20,6 @@
     width: 15rem;
   }
 
-  &::placeholder {
-    // font-size: 1.9rem;
-  }
-
   &:focus {
     border: 2px solid $color-blue-light;
 
