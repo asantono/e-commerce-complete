@@ -63,7 +63,8 @@
     display: flex;
     flex-direction: column;
     width: 90vw;
-    border: 2px solid $color-blue-light;
+    border-top: 2px solid $color-blue-light;
+    border-bottom: 2px solid $color-blue-light;
 
     @include md {
       width: 100%;

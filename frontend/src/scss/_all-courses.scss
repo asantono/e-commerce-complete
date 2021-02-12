@@ -10,6 +10,16 @@
     font-size: 2.5rem;
   }
 
+  &__course-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: $color-blue-light;
+  }
+
+  &__course-author {
+    font-style: italic;
+  }
+
   &__load {
     height: 4rem;
     width: 18rem;
@@ -19,6 +29,7 @@
     color: $color-blue-light;
     font-size: 1.8rem;
     font-weight: 800;
+    -webkit-appearance: none;
     cursor: pointer;
 
     transition: all 0.3s;

@@ -16,6 +16,7 @@
     border-radius: 10rem;
     border: 2px solid $color-blue-light;
     transition: all 0.3s;
+    -webkit-appearance: none;
     cursor: pointer;
 
     &:hover {
@@ -45,6 +46,11 @@
     justify-content: space-between;
     padding: 2rem;
     cursor: pointer;
+
+    @include sm {
+      padding: 1rem;
+    }
+
     &--left {
       display: flex;
       width: 55%;
@@ -69,6 +75,7 @@
         border-radius: 10rem;
         border: 2px solid $color-blue-dark;
         transition: all 0.3s;
+        -webkit-appearance: none;
         cursor: pointer;
 
         &:hover {
@@ -88,7 +95,12 @@
         border-radius: 10rem;
         border: 2px solid $color-pink-dark;
         transition: all 0.3s;
+        -webkit-appearance: none;
         cursor: pointer;
+
+        @include tn {
+          margin-left: 1rem;
+        }
 
         &:hover {
           color: $color-pink-dark;

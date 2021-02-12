@@ -32,6 +32,18 @@ $screen-xl-max: 2800px;
 
 // Mixins
 
+// @mixin tn {
+//   @media (max-width: 1px) {
+//     @content;
+//   }
+// }
+
+// @mixin sm {
+//   @media (max-width: 1px) {
+//     @content;
+//   }
+// }
+
 @mixin tn {
   @media (max-width: #{$screen-tn-max}) {
     @content;

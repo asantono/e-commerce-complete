@@ -20,6 +20,7 @@ const useScrollTracker = (offset = 0) => {
     scrollY: window.scrollY,
     windowHeight: window.innerHeight,
     documentHeight: document.documentElement.scrollHeight,
+    windowWidth: window.innerWidth,
   };
 };
 

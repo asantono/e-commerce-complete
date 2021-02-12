@@ -14,7 +14,7 @@ const About = () => {
         </div>
         <div className="about__message--link">
           <a
-            href="https://github.com/asantono/e-commerce"
+            href="https://github.com/asantono/e-commerce-complete"
             target="_blank"
             rel="noopener noreferrer"
           >

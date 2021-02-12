@@ -36,8 +36,10 @@ const AllCourses = () => {
       onClick={() => goToProduct(el)}
     >
       <div className="result-box__course--left">
-        <div className="result-box__course--left--title">{el.title}</div>
-        <div className="result-box__course--left--author">
+        <div className="result-box__course--left--title all-courses__course-title">
+          {el.title}
+        </div>
+        <div className="result-box__course--left--author   all-courses__course-author">
           author: {el.author}
         </div>
       </div>

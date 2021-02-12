@@ -9,6 +9,11 @@
   margin: 2rem auto 3rem auto;
   padding: 3rem;
 
+  @include md {
+    width: 100vw;
+    margin: 2rem 0 3rem 0;
+  }
+
   &__card-picked {
     display: flex;
     width: 100%;
@@ -40,6 +45,10 @@
     padding: 2rem;
     justify-content: space-evenly;
     margin-right: 2.8rem;
+
+    @include sm {
+      padding: 2rem 0;
+    }
   }
 
   &__button {

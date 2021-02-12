@@ -37,6 +37,14 @@
     padding-top: 1.4rem;
     transition: opacity 0.3s;
 
+    @include md {
+      transform: translateX(-45%);
+    }
+
+    @include sm {
+      transform: translateX(-55%);
+    }
+
     &--links {
       display: flex;
       flex-direction: column;

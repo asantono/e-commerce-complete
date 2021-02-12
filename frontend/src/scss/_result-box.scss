@@ -2,12 +2,12 @@
 
 .result-box {
   position: absolute;
-  height: 70vh;
+  max-height: 70vh;
   width: 80vw;
   left: 50%;
   background-color: rgba($color-blue-light, 1);
   color: $color-grey-light;
-  z-index: 9999999999;
+  z-index: 999999999999999;
   transform: translate(-50%, 3%);
   opacity: 1;
   transition: opacity 0.5s;
@@ -16,10 +16,6 @@
     opacity: 0;
     width: 0;
     height: 0;
-  }
-
-  &__container {
-    // display: flex;
   }
 
   &__course {
@@ -34,25 +30,44 @@
     cursor: pointer;
     transition: background-color 0.3s;
 
+    @include sm {
+      flex-direction: column;
+    }
+
     &:hover {
       background-color: rgba($color-pink-dark, 1);
     }
 
     &--left {
       width: 40%;
-      margin-right: 5%;
+      margin: 0;
+
+      @include sm {
+        width: 100%;
+        margin-left: 5%;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
       &--title {
         font-size: 1.8rem;
         font-weight: 600;
         margin-bottom: 2rem;
-      }
-      &--author {
+
+        @include sm {
+          font-size: 2rem;
+          font-weight: 800;
+          margin-bottom: 1rem;
+        }
       }
     }
 
     &--right {
       width: 55%;
-      &--adtext {
+
+      @include sm {
+        width: 100%;
+
+        text-align: center;
       }
     }
   }

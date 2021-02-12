@@ -12,6 +12,10 @@ const cartTotal = (cart, sale) => {
 
 export const addToCart = (cart, item, sale) => (dispatch) => {
   item.sale = sale;
+  if (cart.some((el) => el._id === item._id)) {
+    dispatch(setAlert("This course is already in your cart"));
+    return;
+  }
   const newCart = [...cart, item];
   const newTotal = cartTotal(newCart, sale);
   dispatch({ type: UPDATE_CART, payload: { cart: newCart, total: newTotal } });

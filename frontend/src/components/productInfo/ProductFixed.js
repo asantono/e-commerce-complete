@@ -27,12 +27,19 @@ const ProductFixed = () => {
     dispatch(addToCart(cart, userCourse, sale));
   };
 
-  const { tooClose } = useScrollTracker(90);
+  const {
+    tooClose,
+    scrollY,
+    windowHeight,
+    documentHeight,
+    windowWidth,
+  } = useScrollTracker(90);
 
   // Classes
-  const fixedClass = tooClose
-    ? "product-cta__buynow product-cta__buynow--offset"
-    : "product-cta__buynow";
+  const fixedClass =
+    tooClose && scrollY > 30
+      ? "product-cta__buynow product-cta__buynow--offset"
+      : "product-cta__buynow";
 
   const image = img.url;
 
