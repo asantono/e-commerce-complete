@@ -14,37 +14,51 @@
 
   &__questions {
     display: grid;
-    width: 80%;
+    align-content: center;
+    justify-items: center;
+    width: 100%;
     grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
   }
 
   &__row {
     display: flex;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
     align-items: center;
-    margin: 2rem 0;
+    justify-content: center;
+    margin: 2rem 0 2rem 0;
   }
 
   &__features {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 20rem;
     margin: 2rem 0;
   }
 
   &__input {
-    // width: 24rem;
+    width: 24rem;
     height: 3rem;
     font-size: 2rem;
-    margin-right: 6rem;
+    padding: 1rem;
     outline: none;
-    border: none;
-    border-bottom: 1px solid $color-black;
-    border-top: 1px solid $color-transparent;
+    border: 1px solid $color-black;
+
+    @include sm {
+      width: 16rem;
+    }
+
+    &::placeholder {
+      padding-left: 3px;
+    }
 
     &-area {
       width: 24rem;
       height: 3rem;
+      padding: 3px;
       font-size: 2rem;
-      margin-right: 6rem;
       height: 12rem;
       border: 1px solid $color-black;
       resize: none;
@@ -53,15 +67,41 @@
       &:focus {
         border: 1px solid $color-blue-light;
       }
+
+      @include sm {
+        width: 16rem;
+      }
+
+      &::placeholder {
+        padding-left: 1rem;
+      }
+    }
+
+    &--select {
+      height: 3rem;
+      font-size: 2rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      width: 24rem;
+      appearance: menulist;
+
+      @include sm {
+        width: 16rem;
+      }
+    }
+
+    &--select-option {
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
 
     &--radio {
-      width: 24rem;
+      // width: 24rem;
       color: $color-blue-light;
     }
 
     &:focus {
-      border-bottom: 1px solid $color-blue-light;
+      border: 1px solid $color-blue-light;
     }
   }
 

@@ -240,13 +240,23 @@ const Teach = () => {
             <div className="teach__row">
               <div className="teach__text">Student access: </div>
               <select
-                className="teach__input teach__input--select"
+                className="teach__input--select"
                 name="accessType"
                 onChange={(e) => handleChange(e)}
                 required
               >
-                <option value="lifetime access">lifetime access</option>
-                <option value="semester end">semester end</option>
+                <option
+                  // className="teach__input--select-option"
+                  value="lifetime access"
+                >
+                  lifetime access
+                </option>
+                <option
+                  //  className="teach__input--select-option"
+                  value="semester end"
+                >
+                  semester end
+                </option>
               </select>
             </div>
           </div>
