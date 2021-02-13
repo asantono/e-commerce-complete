@@ -1115,7 +1115,8 @@ textarea {
     padding-left: 1rem;
     padding-right: 1rem;
     outline: none;
-    border: 1px solid #000000; }
+    border: 1px solid #000000;
+    transform: scale(1); }
     @media (max-width: 450px) {
       .teach__input {
         width: 20rem; } }
@@ -1138,6 +1139,7 @@ textarea {
       padding-left: 1rem;
       padding-right: 1rem;
       width: 24rem;
+      background-color: rgba(0, 0, 0, 0.05);
       appearance: menulist; }
       @media (max-width: 450px) {
         .teach__input--select {
