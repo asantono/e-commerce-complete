@@ -1093,7 +1093,7 @@ textarea {
     align-content: center;
     justify-items: center;
     width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr)); }
+    grid-template-columns: repeat(auto-fit, minmax(43rem, 1fr)); }
   .teach__row {
     display: flex;
     width: 100%;
@@ -1101,7 +1101,7 @@ textarea {
     padding-right: 1rem;
     align-items: center;
     justify-content: center;
-    margin: 2rem 0 2rem 0; }
+    margin: 1rem 0 1rem 0; }
   .teach__features {
     display: flex;
     flex-direction: column;
@@ -1112,40 +1112,36 @@ textarea {
     width: 24rem;
     height: 3rem;
     font-size: 2rem;
-    padding: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     outline: none;
     border: 1px solid #000000; }
-    @media (max-width: 596px) {
+    @media (max-width: 450px) {
       .teach__input {
-        width: 16rem; } }
-    .teach__input::placeholder {
-      padding-left: 3px; }
+        width: 20rem; } }
     .teach__input-area {
       width: 24rem;
-      height: 3rem;
-      padding: 3px;
+      padding: 1rem;
       font-size: 2rem;
-      height: 12rem;
+      height: 20rem;
       border: 1px solid #000000;
       resize: none;
       outline: none; }
       .teach__input-area:focus {
         border: 1px solid #1dace3; }
-      @media (max-width: 596px) {
+      @media (max-width: 450px) {
         .teach__input-area {
-          width: 16rem; } }
-      .teach__input-area::placeholder {
-        padding-left: 1rem; }
+          width: 20rem; } }
     .teach__input--select {
       height: 3rem;
       font-size: 2rem;
-      padding-left: 2rem;
-      padding-right: 2rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
       width: 24rem;
       appearance: menulist; }
-      @media (max-width: 596px) {
+      @media (max-width: 450px) {
         .teach__input--select {
-          width: 16rem; } }
+          width: 20rem; } }
     .teach__input--select-option {
       padding-left: 1rem;
       padding-right: 1rem; }

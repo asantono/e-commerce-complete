@@ -245,18 +245,8 @@ const Teach = () => {
                 onChange={(e) => handleChange(e)}
                 required
               >
-                <option
-                  // className="teach__input--select-option"
-                  value="lifetime access"
-                >
-                  lifetime access
-                </option>
-                <option
-                  //  className="teach__input--select-option"
-                  value="semester end"
-                >
-                  semester end
-                </option>
+                <option value="lifetime access">lifetime access</option>
+                <option value="semester end">semester end</option>
               </select>
             </div>
           </div>
