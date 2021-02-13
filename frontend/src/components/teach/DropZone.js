@@ -40,7 +40,6 @@ const DropZone = () => {
       dispatch(sendCourseImage(files, courseId));
       history.replace("/teacherhome");
     }
-    return () => history.replace("/teacherhome");
   }, [sendImage]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fileRejectionItems = fileRejections.map(({ file, errors }) => {

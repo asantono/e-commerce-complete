@@ -56,23 +56,23 @@ function App() {
               <Route exact path="/activeCourse">
                 <ActiveCourse />
               </Route>
-
+              <Route exact path="/allcourses">
+                <AllCoursesPage />
+              </Route>
+              <Route exact path="/teachers">
+                <Teachers />
+              </Route>
               <Route exact path="/teacherhome">
                 <TeachHome />
               </Route>
 
-              <Route exact path="/teachers">
-                <Teachers />
-              </Route>
               <Route exact path="/admin">
                 <AdminPanel />
               </Route>
               <Route exact path="/adminorder">
                 <AdminOrderPage />
               </Route>
-              <Route exact path="/allcourses">
-                <AllCoursesPage />
-              </Route>
+
               <Route exact path="/contact">
                 <ContactPage />
               </Route>
